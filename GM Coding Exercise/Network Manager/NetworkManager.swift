@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//Test
 final class NetworkManager{
     typealias AristParamaters =  Result<MediaResponse,Error>
     static var shared = NetworkManager()
