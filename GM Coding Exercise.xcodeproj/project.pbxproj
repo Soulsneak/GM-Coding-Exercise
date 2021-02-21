@@ -23,6 +23,7 @@
 		65ABD79425E2CFD00029260F /* AsynchronousTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABD79325E2CFD00029260F /* AsynchronousTestCase.swift */; };
 		65ABD7A025E2DDB90029260F /* TestArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = 65ABD79F25E2DDB90029260F /* TestArtist.json */; };
 		65ABD7C625E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABD7C525E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift */; };
+		65ABD7D225E30BE20029260F /* TableEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABD7D125E30BE20029260F /* TableEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		65ABD7C325E2FA8C0029260F /* GM Coding ExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GM Coding ExerciseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ABD7C525E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GM_Coding_ExerciseUITests.swift; sourceTree = "<group>"; };
 		65ABD7C725E2FA8C0029260F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65ABD7D125E30BE20029260F /* TableEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		65ABD7A325E2E6440029260F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				65ABD7D025E30BD20029260F /* Helpers */,
 				65751DA925E07B4E0081CC2E /* Constants */,
 			);
 			path = Utilities;
@@ -214,6 +217,14 @@
 				65ABD7C725E2FA8C0029260F /* Info.plist */,
 			);
 			path = "GM Coding ExerciseUITests";
+			sourceTree = "<group>";
+		};
+		65ABD7D025E30BD20029260F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65ABD7D125E30BE20029260F /* TableEnums.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				65751DBE25E1DFB20081CC2E /* ArtistViewModel.swift in Sources */,
 				65751DA125E05C3E0081CC2E /* TableCell.swift in Sources */,
 				65751D7325E011950081CC2E /* ViewController.swift in Sources */,
+				65ABD7D225E30BE20029260F /* TableEnums.swift in Sources */,
 				65751D9225E0176D0081CC2E /* NetworkManager.swift in Sources */,
 				65751D9925E018D10081CC2E /* ArtistData.swift in Sources */,
 				65751D6F25E011950081CC2E /* AppDelegate.swift in Sources */,

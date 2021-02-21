@@ -24,20 +24,21 @@ class ViewController: UIViewController,UITableViewDelegate {
             spinner.isHidden = false
             guard let tf = searchTextField.text else { return }
             NetworkManager.shared.fetchArtist(artistName: tf) {[weak self] (res) in
+                guard let self = self else { return }
                 DispatchQueue.main.async {
                     switch res {
                     case .failure(let error):
                         print(error)
                     case .success(let art):
                         for x in art.results{
-                            self?.artistInfoz.append(x)
+                            self.artistInfoz.append(x)
                         }
-                        self?.tableView.reloadData()
+                        self.tableView.reloadData()
                     }
                 }
                 DispatchQueue.main.async {
-                    self?.spinner.isHidden = true
-                    self?.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    self.spinner.stopAnimating()
                 }
             }
             artistInfoz.removeAll()
@@ -56,13 +57,18 @@ class ViewController: UIViewController,UITableViewDelegate {
         formatter.dateFormat = "MM/dd/yyyy"
         return formatter
     }()
+    var dataSource:UITableViewDiffableDataSource<Section,MediaResponse>!
 
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         spinner.isHidden = true
+        let str = "Animals As Leaders"
         configureDelegates()
         configureUI()
+        let freedSpaceString = str.filter {!$0.isWhitespace}
+        print(freedSpaceString)
+        
     }
     //MARK: - Helper Functions
     func configureDelegates(){
@@ -76,20 +82,16 @@ class ViewController: UIViewController,UITableViewDelegate {
         searchTextField.autocapitalizationType = .words
         tableView.delegate = self
     }
-    func activityIndicator() {
-        spinner.style = UIActivityIndicatorView.Style.medium
-        spinner.center = self.view.center
-        self.view.addSubview(spinner)
-    }
     func configureUI(){
         guard let tf = searchTextField.text else { return }
         NetworkManager.shared.fetchArtist(artistName: tf) {[weak self] (res) in
+            guard let self = self else { return }
             switch res {
             case .failure(let error):
                 print(error)
             case .success(let art):
                 for x in art.results{
-                    self?.artistInfoz.append(x)
+                    self.artistInfoz.append(x)
                 }
             }
         }
@@ -100,7 +102,7 @@ extension ViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artistInfoz.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId,for: indexPath) as! TableViewCell
         let cellData = artistInfoz[indexPath.row]

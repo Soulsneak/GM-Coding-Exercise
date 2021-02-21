@@ -22,7 +22,8 @@ extension URLSession: DataTaskMaker{ }
 extension NetworkManager{
     func fetchArtist(artistName:String,completion: @escaping (AristParamaters) -> ()) {
         let urlString = "https://itunes.apple.com/search?media=music&entity=song&term=\(artistName)"
-        guard let url = URL(string: urlString) else { return }
+        let urlStringTrimmed = urlString.filter {!$0.isWhitespace}
+        guard let url = URL(string: urlStringTrimmed) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let err = error{
                 completion(.failure(err))

@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct MediaResponse:Codable {
+struct MediaResponse:Codable,Hashable {
     var results:[MusicItem]
 }
-struct MusicItem:Codable {
+struct MusicItem:Codable,Hashable {
     var artistName:String
     var trackName:String
     var releaseDate:String
