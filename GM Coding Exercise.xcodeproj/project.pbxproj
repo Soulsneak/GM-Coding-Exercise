@@ -22,10 +22,18 @@
 		65751DBE25E1DFB20081CC2E /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65751DBD25E1DFB20081CC2E /* ArtistViewModel.swift */; };
 		65ABD79425E2CFD00029260F /* AsynchronousTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABD79325E2CFD00029260F /* AsynchronousTestCase.swift */; };
 		65ABD7A025E2DDB90029260F /* TestArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = 65ABD79F25E2DDB90029260F /* TestArtist.json */; };
+		65ABD7C625E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABD7C525E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		65ABD79625E2CFD00029260F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65751D6325E011950081CC2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65751D6A25E011950081CC2E;
+			remoteInfo = "GM Coding Exercise";
+		};
+		65ABD7C825E2FA8C0029260F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 65751D6325E011950081CC2E /* Project object */;
 			proxyType = 1;
@@ -54,6 +62,9 @@
 		65ABD79325E2CFD00029260F /* AsynchronousTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousTestCase.swift; sourceTree = "<group>"; };
 		65ABD79525E2CFD00029260F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65ABD79F25E2DDB90029260F /* TestArtist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestArtist.json; sourceTree = "<group>"; };
+		65ABD7C325E2FA8C0029260F /* GM Coding ExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GM Coding ExerciseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65ABD7C525E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GM_Coding_ExerciseUITests.swift; sourceTree = "<group>"; };
+		65ABD7C725E2FA8C0029260F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +82,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65ABD7C025E2FA8C0029260F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +97,7 @@
 			children = (
 				65751D6D25E011950081CC2E /* GM Coding Exercise */,
 				65ABD79225E2CFD00029260F /* GM Coding ExerciseTests */,
+				65ABD7C425E2FA8C0029260F /* GM Coding ExerciseUITests */,
 				65751D6C25E011950081CC2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +107,7 @@
 			children = (
 				65751D6B25E011950081CC2E /* GM Coding Exercise.app */,
 				65ABD79125E2CFD00029260F /* GM Coding ExerciseTests.xctest */,
+				65ABD7C325E2FA8C0029260F /* GM Coding ExerciseUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +207,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		65ABD7C425E2FA8C0029260F /* GM Coding ExerciseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				65ABD7C525E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift */,
+				65ABD7C725E2FA8C0029260F /* Info.plist */,
+			);
+			path = "GM Coding ExerciseUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,6 +254,24 @@
 			productReference = 65ABD79125E2CFD00029260F /* GM Coding ExerciseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		65ABD7C225E2FA8C0029260F /* GM Coding ExerciseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65ABD7CA25E2FA8C0029260F /* Build configuration list for PBXNativeTarget "GM Coding ExerciseUITests" */;
+			buildPhases = (
+				65ABD7BF25E2FA8C0029260F /* Sources */,
+				65ABD7C025E2FA8C0029260F /* Frameworks */,
+				65ABD7C125E2FA8C0029260F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65ABD7C925E2FA8C0029260F /* PBXTargetDependency */,
+			);
+			name = "GM Coding ExerciseUITests";
+			productName = "GM Coding ExerciseUITests";
+			productReference = 65ABD7C325E2FA8C0029260F /* GM Coding ExerciseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -238,6 +285,10 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					65ABD79025E2CFD00029260F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 65751D6A25E011950081CC2E;
+					};
+					65ABD7C225E2FA8C0029260F = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 65751D6A25E011950081CC2E;
 					};
@@ -258,6 +309,7 @@
 			targets = (
 				65751D6A25E011950081CC2E /* GM Coding Exercise */,
 				65ABD79025E2CFD00029260F /* GM Coding ExerciseTests */,
+				65ABD7C225E2FA8C0029260F /* GM Coding ExerciseUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				65ABD7A025E2DDB90029260F /* TestArtist.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65ABD7C125E2FA8C0029260F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +368,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65ABD7BF25E2FA8C0029260F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65ABD7C625E2FA8C0029260F /* GM_Coding_ExerciseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -316,6 +383,11 @@
 			isa = PBXTargetDependency;
 			target = 65751D6A25E011950081CC2E /* GM Coding Exercise */;
 			targetProxy = 65ABD79625E2CFD00029260F /* PBXContainerItemProxy */;
+		};
+		65ABD7C925E2FA8C0029260F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65751D6A25E011950081CC2E /* GM Coding Exercise */;
+			targetProxy = 65ABD7C825E2FA8C0029260F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,6 +605,44 @@
 			};
 			name = Release;
 		};
+		65ABD7CB25E2FA8C0029260F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KY2G7LUUJQ;
+				INFOPLIST_FILE = "GM Coding ExerciseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DerekGlobal.GM-Coding-ExerciseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GM Coding Exercise";
+			};
+			name = Debug;
+		};
+		65ABD7CC25E2FA8C0029260F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KY2G7LUUJQ;
+				INFOPLIST_FILE = "GM Coding ExerciseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DerekGlobal.GM-Coding-ExerciseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GM Coding Exercise";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,6 +669,15 @@
 			buildConfigurations = (
 				65ABD79825E2CFD00029260F /* Debug */,
 				65ABD79925E2CFD00029260F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65ABD7CA25E2FA8C0029260F /* Build configuration list for PBXNativeTarget "GM Coding ExerciseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65ABD7CB25E2FA8C0029260F /* Debug */,
+				65ABD7CC25E2FA8C0029260F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

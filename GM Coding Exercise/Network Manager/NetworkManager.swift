@@ -6,13 +6,10 @@
 //
 
 import Foundation
-//Test
 final class NetworkManager{
     typealias AristParamaters =  Result<MediaResponse,Error>
     static var shared = NetworkManager()
-//    let session:URLSession
     let session:DataTaskMaker
-    //this was url session
      init(session: DataTaskMaker = URLSession.shared){
         self.session = session
     }

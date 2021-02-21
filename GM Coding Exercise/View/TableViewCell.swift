@@ -35,5 +35,4 @@ class TableViewCell: UITableViewCell {
         price.text = String(viewModel.trackPrice ?? 0)
         
     }
-    
 }

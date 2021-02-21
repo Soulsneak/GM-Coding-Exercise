@@ -31,7 +31,6 @@ final class AsynchronousTestCase: XCTestCase {
         let urlString = URL(string: "https://itunes.apple.com/search?media=music&entity=song&term=Slipknot")!
         URLSession.shared.dataTask(with: urlString) { (data, response, error) in
             defer{ self.expectation.fulfill() }
-            
             do{
                 let response = try XCTUnwrap(response as? HTTPURLResponse)
                 XCTAssertEqual(response.statusCode, 200)
@@ -91,7 +90,6 @@ final class AsynchronousTestCase: XCTestCase {
                   override init(){}
                 }
                 return FakeDataTask()
-                                  
             }
         }
         NetworkManager.shared.fetchArtist(artistName: "Slipknot"){ artist in

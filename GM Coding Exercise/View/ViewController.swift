@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate {
     //MARK: - IBOutlets
-    @IBOutlet weak var artistButton: UIButton!
+    @IBOutlet weak var artistButton: UIButton!{
+        didSet{
+            artistButton.accessibilityIdentifier = "Test"
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -37,27 +41,8 @@ class ViewController: UIViewController,UITableViewDelegate {
                 }
             }
             artistInfoz.removeAll()
-//            isSearching = false
-        }else{
-//            spinner.isHidden = true
-//            spinner.stopAnimating()
-//            isSearching = true
-        }
-//        guard let tf = searchTextField.text else { return }
-//        NetworkManager.shared.fetchArtist(artistName: tf) {[weak self] (res) in
-//            DispatchQueue.main.async {
-//                switch res {
-//                case .failure(let error):
-//                    print(error)
-//                case .success(let art):
-//                    for x in art.results{
-//                        self?.artistInfoz.append(x)
-//                    }
-//                    self?.tableView.reloadData()
-//                }
-//            }
-//        }
-//        artistInfoz.removeAll()
+        }else{ }
+
     }
     //MARK: - Properties
     var viewModel:ArtistViewModel?
@@ -76,15 +61,15 @@ class ViewController: UIViewController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         spinner.isHidden = true
-//        spinner.color = .gray
-        
         configureDelegates()
         configureUI()
     }
+    //MARK: - Helper Functions
     func configureDelegates(){
         let nib = UINib(nibName: Constants.nibName, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: Constants.nibName)
         tableView.dataSource = self
+        tableView.allowsSelection = false
         searchTextField.delegate = self
         searchTextField.autocorrectionType = .no
         searchTextField.returnKeyType = .done
@@ -110,7 +95,7 @@ class ViewController: UIViewController,UITableViewDelegate {
         }
     }
 }
-
+//MARK: - TableViewDataSource
 extension ViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artistInfoz.count
@@ -119,15 +104,11 @@ extension ViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId,for: indexPath) as! TableViewCell
         let cellData = artistInfoz[indexPath.row]
-//        cell.artistName.text = cellData.artistName
-//        cell.genre.text = cellData.primaryGenreName
-//        cell.trackName.text = cellData.trackName
-//        cell.releaseDate.text = cellData.releaseDate
-//        cell.price.text = String(cellData.trackPrice ?? 0.00)
         cell.configure(with: ArtistViewModel(with: cellData))
         return cell
     }
 }
+//MARK: - TextField Delegate
 extension ViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.resignFirstResponder()
@@ -139,7 +120,7 @@ extension ViewController:UITextFieldDelegate{
         if textField.text != "" {
             return true
         }else{
-            textField.placeholder = "Enter Artist"
+            textField.placeholder = "Enter Artist Name"
             return false
         }
     }
