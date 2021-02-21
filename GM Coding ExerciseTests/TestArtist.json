@@ -1,0 +1,77 @@
+//
+//  TestArtist.json
+//  GM Coding ExerciseTests
+//
+//  Created by Derek on 2/21/21.
+//
+
+import Foundation
+
+"results": [
+        {
+            "wrapperType": "track",
+            "kind": "song",
+            "artistId": 6907568,
+            "collectionId": 926184050,
+            "trackId": 926184076,
+            "artistName": "Slipknot",
+            "collectionName": "Vol. 3 The Subliminal Verses",
+            "trackName": "Before I Forget",
+            "collectionCensoredName": "Vol. 3 The Subliminal Verses",
+            "trackCensoredName": "Before I Forget",
+            "artistViewUrl": "https://music.apple.com/us/artist/slipknot/6907568?uo=4",
+            "collectionViewUrl": "https://music.apple.com/us/album/before-i-forget/926184050?i=926184076&uo=4",
+            "trackViewUrl": "https://music.apple.com/us/album/before-i-forget/926184050?i=926184076&uo=4",
+            "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/Music1/v4/53/f7/f8/53f7f823-7bb7-1aa9-2ae3-d4d31db34e3f/mzaf_1059662200712333501.plus.aac.p.m4a",
+            "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/1a/f7/c7/1af7c73f-4e65-4772-5eb1-2647db30ef7e/source/30x30bb.jpg",
+            "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/1a/f7/c7/1af7c73f-4e65-4772-5eb1-2647db30ef7e/source/60x60bb.jpg",
+            "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/1a/f7/c7/1af7c73f-4e65-4772-5eb1-2647db30ef7e/source/100x100bb.jpg",
+            "collectionPrice": 9.99,
+            "trackPrice": 1.29,
+            "releaseDate": "2004-05-24T07:00:00Z",
+            "collectionExplicitness": "explicit",
+            "trackExplicitness": "notExplicit",
+            "discCount": 1,
+            "discNumber": 1,
+            "trackCount": 14,
+            "trackNumber": 10,
+            "trackTimeMillis": 278600,
+            "country": "USA",
+            "currency": "USD",
+            "primaryGenreName": "Metal",
+            "isStreamable": true
+        },
+        {
+            "wrapperType": "track",
+            "kind": "song",
+            "artistId": 6907568,
+            "collectionId": 927731469,
+            "trackId": 927731733,
+            "artistName": "Slipknot",
+            "collectionName": "Slipknot",
+            "trackName": "Wait and Bleed",
+            "collectionCensoredName": "Slipknot",
+            "trackCensoredName": "Wait and Bleed",
+            "artistViewUrl": "https://music.apple.com/us/artist/slipknot/6907568?uo=4",
+            "collectionViewUrl": "https://music.apple.com/us/album/wait-and-bleed/927731469?i=927731733&uo=4",
+            "trackViewUrl": "https://music.apple.com/us/album/wait-and-bleed/927731469?i=927731733&uo=4",
+            "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/Music3/v4/b7/2d/3c/b72d3c7e-d5de-7eec-1fae-b808f718caa3/mzaf_4186302139995622447.plus.aac.p.m4a",
+            "artworkUrl30": "https://is3-ssl.mzstatic.com/image/thumb/Music3/v4/aa/aa/de/aaaadeff-d5d0-96ad-f1b0-5ce665fba3df/source/30x30bb.jpg",
+            "artworkUrl60": "https://is3-ssl.mzstatic.com/image/thumb/Music3/v4/aa/aa/de/aaaadeff-d5d0-96ad-f1b0-5ce665fba3df/source/60x60bb.jpg",
+            "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music3/v4/aa/aa/de/aaaadeff-d5d0-96ad-f1b0-5ce665fba3df/source/100x100bb.jpg",
+            "collectionPrice": 9.99,
+            "trackPrice": 1.29,
+            "releaseDate": "1999-06-29T07:00:00Z",
+            "collectionExplicitness": "explicit",
+            "trackExplicitness": "notExplicit",
+            "discCount": 1,
+            "discNumber": 1,
+            "trackCount": 15,
+            "trackNumber": 4,
+            "trackTimeMillis": 147582,
+            "country": "USA",
+            "currency": "USD",
+            "primaryGenreName": "Metal",
+            "isStreamable": true
+        }
+]
