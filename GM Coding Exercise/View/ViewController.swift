@@ -19,31 +19,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBAction func searchButtonTapped(_ sender: Any) {
-        if isSearching == true{
-            spinner.startAnimating()
-            spinner.isHidden = false
-            guard let tf = searchTextField.text else { return }
-            NetworkManager.shared.fetchArtist(artistName: tf) {[weak self] (res) in
-                guard let self = self else { return }
-                DispatchQueue.main.async {
-                    switch res {
-                    case .failure(let error):
-                        print(error)
-                    case .success(let art):
-                        for x in art.results{
-                            self.artistInfoz.append(x)
-                        }
-                        self.tableView.reloadData()
-                    }
-                }
-                DispatchQueue.main.async {
-                    self.spinner.isHidden = true
-                    self.spinner.stopAnimating()
-                }
-            }
-            artistInfoz.removeAll()
-        }else{ }
-
+        loadArtist()
     }
     //MARK: - Properties
     var viewModel:ArtistViewModel?
@@ -60,6 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinner.isHidden = true
         configureDelegates()
         configureUI()
     }
@@ -89,6 +66,32 @@ class ViewController: UIViewController,UITableViewDelegate {
             }
         }
     }
+    func loadArtist(){
+        if isSearching == true{
+            spinner.startAnimating()
+            spinner.isHidden = false
+            guard let tf = searchTextField.text else { return }
+            NetworkManager.shared.fetchArtist(artistName: tf) {[weak self] (res) in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    switch res {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let art):
+                        for x in art.results{
+                            self.artistInfoz.append(x)
+                        }
+                        self.tableView.reloadData()
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.spinner.isHidden = true
+                    self.spinner.stopAnimating()
+                }
+            }
+            artistInfoz.removeAll()
+        }else{ }
+    }
 }
 //MARK: - TableViewDataSource
 extension ViewController:UITableViewDataSource{
@@ -101,6 +104,14 @@ extension ViewController:UITableViewDataSource{
         let cellData = artistInfoz[indexPath.row]
         cell.configure(with: ArtistViewModel(with: cellData))
         return cell
+    }
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print("PREFETCH",indexPaths)
+        for path in indexPaths{
+            if(path.contains(self.artistInfoz.count-1)){
+                self.loadArtist()
+            }
+        }
     }
 }
 //MARK: - TextField Delegate

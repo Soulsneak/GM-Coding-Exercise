@@ -39,9 +39,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Yzs-hn-GIy">
-                                <rect key="frame" x="145" y="104" width="116" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Yzs-hn-GIy">
+                                <rect key="frame" x="145" y="104" width="115" height="20"/>
                                 <color key="color" red="1" green="0.1762711015" blue="0.33716210089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                         </subviews>
@@ -49,15 +48,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qxs-GM-czs" secondAttribute="trailing" id="Gb9-01-8K8"/>
+                            <constraint firstItem="Yzs-hn-GIy" firstAttribute="centerX" secondItem="qxs-GM-czs" secondAttribute="centerX" id="MO7-D1-XTg"/>
                             <constraint firstItem="CY5-RF-zeg" firstAttribute="top" secondItem="re7-nO-tN3" secondAttribute="top" constant="7" id="NaY-HS-zPv"/>
                             <constraint firstItem="qxs-GM-czs" firstAttribute="leading" secondItem="ZDn-WG-va2" secondAttribute="leadingMargin" constant="-29" id="NhI-ya-tum"/>
                             <constraint firstItem="qxs-GM-czs" firstAttribute="top" secondItem="RZ2-1j-Q2y" secondAttribute="bottom" constant="47" id="U9F-X4-vV6"/>
                             <constraint firstItem="RZ2-1j-Q2y" firstAttribute="top" secondItem="re7-nO-tN3" secondAttribute="top" constant="11" id="apy-cH-0wz"/>
                             <constraint firstItem="qxs-GM-czs" firstAttribute="bottom" secondItem="re7-nO-tN3" secondAttribute="bottom" id="bK4-zm-rIt"/>
                             <constraint firstItem="re7-nO-tN3" firstAttribute="trailing" secondItem="RZ2-1j-Q2y" secondAttribute="trailing" constant="20" id="bQz-dM-N5U"/>
+                            <constraint firstItem="qxs-GM-czs" firstAttribute="top" secondItem="Yzs-hn-GIy" secondAttribute="bottom" constant="8" symbolic="YES" id="bRO-1j-jhR"/>
                             <constraint firstItem="CY5-RF-zeg" firstAttribute="leading" secondItem="re7-nO-tN3" secondAttribute="leading" constant="20" id="p9i-G7-K7B"/>
                             <constraint firstItem="qxs-GM-czs" firstAttribute="top" secondItem="CY5-RF-zeg" secondAttribute="bottom" constant="47" id="qdg-PU-mGU"/>
                             <constraint firstItem="RZ2-1j-Q2y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CY5-RF-zeg" secondAttribute="trailing" constant="8" symbolic="YES" id="ssS-fa-G1a"/>
+                            <constraint firstItem="Yzs-hn-GIy" firstAttribute="leading" secondItem="re7-nO-tN3" secondAttribute="leading" constant="145" id="uZo-OZ-yXo"/>
                         </constraints>
                     </view>
                     <connections>

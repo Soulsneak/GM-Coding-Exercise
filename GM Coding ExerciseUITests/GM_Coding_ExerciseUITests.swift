@@ -42,7 +42,7 @@ class GM_Coding_ExerciseUITests: XCTestCase {
             app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"done\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
             XCUIDevice.shared.orientation = .landscapeRight
         }
-        XCTAssertFalse(app.textFields["Enter Artist Name"].exists)
+        XCTAssert(app.textFields["Enter Artist Name"].exists)
         
     }
 }
