@@ -57,8 +57,6 @@ class ViewController: UIViewController,UITableViewDelegate {
         formatter.dateFormat = "MM/dd/yyyy"
         return formatter
     }()
-    var dataSource:UITableViewDiffableDataSource<Section,MediaResponse>!
-
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
