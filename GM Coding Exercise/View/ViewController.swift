@@ -62,13 +62,8 @@ class ViewController: UIViewController,UITableViewDelegate {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinner.isHidden = true
-        let str = "Animals As Leaders"
         configureDelegates()
         configureUI()
-        let freedSpaceString = str.filter {!$0.isWhitespace}
-        print(freedSpaceString)
-        
     }
     //MARK: - Helper Functions
     func configureDelegates(){
