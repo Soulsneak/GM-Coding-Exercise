@@ -26,13 +26,6 @@ class ViewController: UIViewController,UITableViewDelegate {
     var artistInformation = [MusicItem]()
     var artistInfoz:[MusicItem] = []
     var isSearching:Bool = true
-    let formatter:DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.timeZone = .current
-        formatter.locale = .current
-        formatter.dateFormat = "MM/dd/yyyy"
-        return formatter
-    }()
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,14 +97,6 @@ extension ViewController:UITableViewDataSource{
         let cellData = artistInfoz[indexPath.row]
         cell.configure(with: ArtistViewModel(with: cellData))
         return cell
-    }
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        print("PREFETCH",indexPaths)
-        for path in indexPaths{
-            if(path.contains(self.artistInfoz.count-1)){
-                self.loadArtist()
-            }
-        }
     }
 }
 //MARK: - TextField Delegate

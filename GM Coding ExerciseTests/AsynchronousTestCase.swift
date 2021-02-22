@@ -79,7 +79,9 @@ final class AsynchronousTestCase: XCTestCase {
                 )
                 data = try Data(contentsOf: url)
             }
+            
             let data:Data
+            
             func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
                 completionHandler(
                   data,
