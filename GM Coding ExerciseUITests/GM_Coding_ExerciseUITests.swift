@@ -26,7 +26,6 @@ class GM_Coding_ExerciseUITests: XCTestCase {
         
         app.textFields["Enter Artist Name"].tap()
         app/*@START_MENU_TOKEN@*/.staticTexts["Search Artist"]/*[[".buttons[\"Search Artist\"].staticTexts[\"Search Artist\"]",".buttons[\"Test\"].staticTexts[\"Search Artist\"]",".staticTexts[\"Search Artist\"]"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"done\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCUIDevice.shared.orientation = .landscapeRight
         
         switch (isiPad,isPortrait) {
@@ -39,10 +38,10 @@ class GM_Coding_ExerciseUITests: XCTestCase {
             break
         default:
             app/*@START_MENU_TOKEN@*/.staticTexts["Search Artist"]/*[[".buttons[\"Search Artist\"].staticTexts[\"Search Artist\"]",".buttons[\"Test\"].staticTexts[\"Search Artist\"]",".staticTexts[\"Search Artist\"]"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-            app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"done\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
             XCUIDevice.shared.orientation = .landscapeRight
         }
         XCTAssert(app.textFields["Enter Artist Name"].exists)
         
     }
 }
+
